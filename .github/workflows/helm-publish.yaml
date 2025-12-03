@@ -2,8 +2,13 @@ name: Release Charts
 
 on:
   push:
-    branches:
-      - main
+    branches: ["master", "main"]
+    paths-ignore:
+      - ".github/**"
+      - ".git*"
+      - "README.md"
+      - "renovate.json5?"
+  workflow_dispatch:
 
 jobs:
   release:
