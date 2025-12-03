@@ -1,0 +1,30 @@
+name: Helm Publish
+
+on:
+  push:
+    branches: [ 'master', 'main' ]
+    paths-ignore:
+      - '.github/**'
+      - '.git*'
+      - 'README.md'
+      - 'renovate.json5?'
+  workflow_dispatch:
+
+jobs:
+  helm:
+    permissions:
+      contents: read
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Helm
+        uses: azure/setup-helm@v4
+
+      - name: Build and Push the Helm Charts to GitHub Container Registry
+        uses: JimCronqvist/action-helm-chart-repo@0.1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          chartsPath: ".charts/"
