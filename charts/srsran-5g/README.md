@@ -1,26 +1,25 @@
-# open5gs-bsf
+# srsran-5g
 
-![Version: 2.3.1](https://img.shields.io/badge/Version-2.3.1-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![AppVersion: 23.10.1](https://img.shields.io/badge/AppVersion-23.10.1-informational?style=flat-square)
 
-Helm chart to deploy Open5gs BSF service on Kubernetes.
-
-**Homepage:** <https://github.com/gradiant/5g-charts>
+Helm chart to deploy srsRAN 5G gNB on Kubernetes.
 
 ## Maintainers
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| cgiraldo | <cgiraldo@gradiant.org> |  |
+| avrodriguez | <avrodriguez@gradiant.org> |  |
 
 ## Source Code
 
-* <http://open5gs.org>
+* <https://github.com/gradiant/5g-charts>
+* <https://github.com/srsran/srsRAN_Project>
 
 ## Requirements
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | common | 2.x.x |
+| https://charts.bitnami.com/bitnami | common | 1.x.x |
 
 ## Values
 
@@ -31,18 +30,27 @@ Helm chart to deploy Open5gs BSF service on Kubernetes.
 | command | list | `[]` |  |
 | commonAnnotations | object | `{}` |  |
 | commonLabels | object | `{}` |  |
-| config.logLevel | string | `"info"` |  |
-| config.sbi.client.nrf.enabled | bool | `false` |  |
-| config.sbi.client.nrf.uri | string | `""` |  |
-| config.sbi.client.scp.enabled | bool | `true` |  |
-| config.sbi.client.scp.uri | string | `""` |  |
-| config.sbi.server | string | `nil` |  |
-| containerPorts.sbi | int | `7777` |  |
+| config.amf.bind_interface | string | `"eth0"` |  |
+| config.amf.hostname | string | `"open5gs-amf-ngap"` |  |
+| config.cell_cfg.band | int | `78` |  |
+| config.cell_cfg.channel_bandwidth_MHz | int | `20` |  |
+| config.cell_cfg.common_scs | int | `30` |  |
+| config.cell_cfg.dl_arfcn | int | `632628` |  |
+| config.cell_cfg.plmn | string | `"99970"` |  |
+| config.cell_cfg.tac | int | `1` |  |
+| config.ru_sdr.device_args | string | `"type=b200,num_recv_frames=64,num_send_frames=64"` |  |
+| config.ru_sdr.device_driver | string | `"uhd"` |  |
+| config.ru_sdr.otw_format | string | `"sc12"` |  |
+| config.ru_sdr.rx_gain | int | `60` |  |
+| config.ru_sdr.srate | float | `23.04` |  |
+| config.ru_sdr.tx_gain | int | `50` |  |
+| config.slicing[0].sd | int | `1118481` |  |
+| config.slicing[0].sst | int | `1` |  |
+| containerPorts.gtpu | int | `2152` |  |
+| containerSecurityContext.capabilities.add[0] | string | `"NET_ADMIN"` |  |
 | containerSecurityContext.enabled | bool | `true` |  |
-| containerSecurityContext.runAsNonRoot | bool | `true` |  |
-| containerSecurityContext.runAsUser | int | `999` |  |
+| containerSecurityContext.privileged | bool | `true` |  |
 | customLivenessProbe | object | `{}` |  |
-| customOpen5gsConfig | object | `{}` |  |
 | customReadinessProbe | object | `{}` |  |
 | customStartupProbe | object | `{}` |  |
 | extraDeploy | list | `[]` |  |
@@ -56,13 +64,12 @@ Helm chart to deploy Open5gs BSF service on Kubernetes.
 | global.imageRegistry | string | `""` |  |
 | global.storageClass | string | `""` |  |
 | hostAliases | list | `[]` |  |
-| image.debug | bool | `false` |  |
-| image.digest | string | `""` |  |
-| image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.pullSecrets | list | `[]` |  |
-| image.registry | string | `"docker.io"` |  |
-| image.repository | string | `"gradiant/open5gs"` |  |
-| image.tag | string | `"2.7.5"` |  |
+| image.srsran.debug | bool | `false` |  |
+| image.srsran.digest | string | `""` |  |
+| image.srsran.pullPolicy | string | `"IfNotPresent"` |  |
+| image.srsran.registry | string | `"docker.io"` |  |
+| image.srsran.repository | string | `"gradiant/srsran-5g"` |  |
+| image.srsran.tag | string | `"23_10_1"` |  |
 | initContainers | list | `[]` |  |
 | kubeVersion | string | `""` |  |
 | lifecycleHooks | object | `{}` |  |
@@ -82,8 +89,8 @@ Helm chart to deploy Open5gs BSF service on Kubernetes.
 | podAnnotations | object | `{}` |  |
 | podAntiAffinityPreset | string | `"soft"` |  |
 | podLabels | object | `{}` |  |
-| podSecurityContext.enabled | bool | `true` |  |
-| podSecurityContext.fsGroup | int | `999` |  |
+| podSecurityContext.enabled | bool | `false` |  |
+| podSecurityContext.fsGroup | int | `1001` |  |
 | priorityClassName | string | `""` |  |
 | readinessProbe.enabled | bool | `true` |  |
 | readinessProbe.failureThreshold | int | `5` |  |
@@ -99,26 +106,29 @@ Helm chart to deploy Open5gs BSF service on Kubernetes.
 | serviceAccount.automountServiceAccountToken | bool | `true` |  |
 | serviceAccount.create | bool | `false` |  |
 | serviceAccount.name | string | `""` |  |
-| services.sbi.annotations | object | `{}` |  |
-| services.sbi.clusterIP | string | `""` |  |
-| services.sbi.externalTrafficPolicy | string | `"Cluster"` |  |
-| services.sbi.extraPorts | list | `[]` |  |
-| services.sbi.loadBalancerIP | string | `""` |  |
-| services.sbi.loadBalancerSourceRanges | list | `[]` |  |
-| services.sbi.nodePorts.sbi | string | `""` |  |
-| services.sbi.ports.sbi | int | `7777` |  |
-| services.sbi.sessionAffinity | string | `"None"` |  |
-| services.sbi.sessionAffinityConfig | object | `{}` |  |
-| services.sbi.type | string | `"ClusterIP"` |  |
+| services.gtpu.annotations | object | `{}` |  |
+| services.gtpu.clusterIP | string | `""` |  |
+| services.gtpu.externalTrafficPolicy | string | `"Cluster"` |  |
+| services.gtpu.extraPorts | list | `[]` |  |
+| services.gtpu.loadBalancerIP | string | `""` |  |
+| services.gtpu.loadBalancerSourceRanges | list | `[]` |  |
+| services.gtpu.nodePorts.gtpu | string | `""` |  |
+| services.gtpu.ports.gtpu | int | `2152` |  |
+| services.gtpu.sessionAffinity | string | `"None"` |  |
+| services.gtpu.sessionAffinityConfig | object | `{}` |  |
+| services.gtpu.type | string | `"ClusterIP"` |  |
 | sessionAffinity | string | `"None"` |  |
 | sidecars | list | `[]` |  |
 | startupProbe.enabled | bool | `false` |  |
 | startupProbe.failureThreshold | int | `5` |  |
 | startupProbe.initialDelaySeconds | int | `600` |  |
+| startupProbe.path | string | `"/"` |  |
 | startupProbe.periodSeconds | int | `10` |  |
 | startupProbe.successThreshold | int | `1` |  |
 | startupProbe.timeoutSeconds | int | `5` |  |
-| tolerations | list | `[]` |  |
+| tolerations[0].effect | string | `"NoSchedule"` |  |
+| tolerations[0].key | string | `"ettus.com/usrp"` |  |
+| tolerations[0].operator | string | `"Equal"` |  |
 | topologySpreadConstraints | list | `[]` |  |
 | updateStrategy.type | string | `"RollingUpdate"` |  |
 
