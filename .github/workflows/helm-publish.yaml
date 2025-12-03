@@ -27,4 +27,4 @@ jobs:
         uses: JimCronqvist/action-helm-chart-repo@0.1.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          chartsPath: ".charts/"
+          chartsPath: "./charts/"
