@@ -7,8 +7,8 @@ sources:
   - https://gitlab.eurecom.fr/oai/openairinterface5g/
 icon: https://openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
 maintainers:
-- email: cgiraldo@gradiant.org
-  name: cgiraldo
+  - email: alex@sengine.cloud
+    name: impuls42
 name: oai-enb
 version: 0.1.1
 annotations:

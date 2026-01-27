@@ -7,8 +7,8 @@ sources:
   - http://open5gs.org
 icon: https://open5gs.org/assets/img/open5gs-logo.png
 maintainers:
-- email: cgiraldo@gradiant.org
-  name: cgiraldo
+  - email: alex@sengine.cloud
+    name: impuls42
 name: open5gs-pcf
 version: 2.3.1
 annotations:

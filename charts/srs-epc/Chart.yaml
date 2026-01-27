@@ -7,8 +7,8 @@ sources:
   - https://github.com/srsran/srsRAN_4G
 icon: https://docs.srsran.com/en/latest/_static/logo.png
 maintainers:
-- email: cgiraldo@gradiant.org
-  name: cgiraldo
+  - email: alex@sengine.cloud
+    name: impuls42
 name: srs-epc
 version: 0.2.1
 annotations:

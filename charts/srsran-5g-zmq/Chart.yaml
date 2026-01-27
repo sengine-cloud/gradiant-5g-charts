@@ -6,8 +6,8 @@ sources:
   - https://github.com/gradiant/5g-charts
   - https://github.com/srsran/srsRAN_Project
 maintainers:
-- email: avrodriguez@gradiant.org
-  name: avrodriguez
+  - email: alex@sengine.cloud
+    name: impuls42
 name: srsran-5g-zmq
 version: 1.0.1
 dependencies:
