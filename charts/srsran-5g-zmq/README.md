@@ -12,7 +12,7 @@ Helm chart to deploy srsRAN 5G gNB on Kubernetes.
 
 ## Source Code
 
-* <https://github.com/gradiant/5g-charts>
+* <https://github.com/sengine-cloud/gradiant-5g-charts>
 * <https://github.com/srsran/srsRAN_Project>
 
 ## Requirements

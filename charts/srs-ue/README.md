@@ -4,7 +4,7 @@
 
 SRS ue
 
-**Homepage:** <https://github.com/Gradiant/charts>
+**Homepage:** <https://github.com/sengine-cloud/gradiant-5g-charts>
 
 ## Maintainers
 
