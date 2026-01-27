@@ -29,7 +29,7 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     condition: mongodb.enabled
   - name: open5gs-amf
-    version: ~2.3.1
+    version: ~2.3.2
     repository: file://../open5gs-amf
     condition: amf.enabled
     alias: amf
