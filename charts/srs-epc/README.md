@@ -1,16 +1,16 @@
 # srs-epc
 
-![Version: 0.2.1](https://img.shields.io/badge/Version-0.2.1-informational?style=flat-square) ![AppVersion: 23.11](https://img.shields.io/badge/AppVersion-23.11-informational?style=flat-square)
+![Version: 0.2.2](https://img.shields.io/badge/Version-0.2.2-informational?style=flat-square) ![AppVersion: 23.11](https://img.shields.io/badge/AppVersion-23.11-informational?style=flat-square)
 
 SRS epc
 
-**Homepage:** <https://github.com/sengine-cloud/gradiant-5g-charts>
+**Homepage:** <https://github.com/gradiant/5g-charts>
 
 ## Maintainers
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| cgiraldo | <cgiraldo@gradiant.org> |  |
+| impuls42 | <alex@sengine.cloud> |  |
 
 ## Source Code
 

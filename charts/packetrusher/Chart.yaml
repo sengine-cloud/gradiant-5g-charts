@@ -9,7 +9,7 @@ maintainers:
   - email: alex@sengine.cloud
     name: impuls42
 name: packetrusher
-version: 0.0.3
+version: 0.0.4
 annotations:
   artifacthub.io/category: networking
 keywords:

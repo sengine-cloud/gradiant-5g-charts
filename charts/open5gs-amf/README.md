@@ -1,6 +1,6 @@
 # open5gs-amf
 
-![Version: 2.3.1](https://img.shields.io/badge/Version-2.3.1-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
+![Version: 2.3.3](https://img.shields.io/badge/Version-2.3.3-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
 
 Helm chart to deploy Open5gs AMF service on Kubernetes.
 
@@ -10,7 +10,7 @@ Helm chart to deploy Open5gs AMF service on Kubernetes.
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| cgiraldo | <cgiraldo@gradiant.org> |  |
+| impuls42 | <alex@sengine.cloud> |  |
 
 ## Source Code
 
@@ -39,6 +39,7 @@ Helm chart to deploy Open5gs AMF service on Kubernetes.
 | config.networkName | string | `"Gradiant"` |  |
 | config.plmnList[0].plmn_id.mcc | string | `"999"` |  |
 | config.plmnList[0].plmn_id.mnc | string | `"70"` |  |
+| config.plmnList[0].s_nssai[0].sd | string | `"000001"` |  |
 | config.plmnList[0].s_nssai[0].sst | int | `1` |  |
 | config.sbi.client.nrf.enabled | bool | `false` |  |
 | config.sbi.client.nrf.uri | string | `""` |  |
