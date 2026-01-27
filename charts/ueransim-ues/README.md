@@ -1,6 +1,6 @@
 # ueransim-ues
 
-![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat-square) ![AppVersion: 3.2.6](https://img.shields.io/badge/AppVersion-3.2.6-informational?style=flat-square)
+![Version: 0.1.3](https://img.shields.io/badge/Version-0.1.3-informational?style=flat-square) ![AppVersion: 3.2.6](https://img.shields.io/badge/AppVersion-3.2.6-informational?style=flat-square)
 
 ueransim UEs for 5G RAN simulation
 
@@ -10,8 +10,7 @@ ueransim UEs for 5G RAN simulation
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| cgiraldo | <cgiraldo@gradiant.org> |  |
-| avrodriguez | <avrodriguez@gradiant.org> |  |
+| impuls42 | <alex@sengine.cloud> |  |
 
 ## Source Code
 

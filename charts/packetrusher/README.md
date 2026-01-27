@@ -1,16 +1,16 @@
 # packetrusher
 
-![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square) ![AppVersion: 2b26573](https://img.shields.io/badge/AppVersion-2b26573-informational?style=flat-square)
+![Version: 0.0.4](https://img.shields.io/badge/Version-0.0.4-informational?style=flat-square) ![AppVersion: 2b26573](https://img.shields.io/badge/AppVersion-2b26573-informational?style=flat-square)
 
 Helm chart to deploy PacketRusher service on Kubernetes.
 
-**Homepage:** <https://github.com/sengine-cloud/gradiant-5g-charts>
+**Homepage:** <https://github.com/gradiant/5g-charts>
 
 ## Maintainers
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| avrodriguez | <avrodriguez@gradiant.org> |  |
+| impuls42 | <alex@sengine.cloud> |  |
 
 ## Source Code
 

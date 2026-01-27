@@ -67,4 +67,4 @@ jobs:
         env:
           CT_TARGET_BRANCH: main
           CT_REMOTE: origin
-        run: ct lint --check-version-increment=false
+        run: ct lint

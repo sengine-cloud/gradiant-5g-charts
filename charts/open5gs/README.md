@@ -1,6 +1,6 @@
 # open5gs
 
-![Version: 2.3.4](https://img.shields.io/badge/Version-2.3.4-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
+![Version: 2.3.6](https://img.shields.io/badge/Version-2.3.6-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
 
 Helm chart to deploy Open5gs services on Kubernetes.
 
@@ -10,7 +10,7 @@ Helm chart to deploy Open5gs services on Kubernetes.
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| cgiraldo | <cgiraldo@gradiant.org> |  |
+| impuls42 | <alex@sengine.cloud> |  |
 
 ## Source Code
 
@@ -20,24 +20,24 @@ Helm chart to deploy Open5gs services on Kubernetes.
 
 | Repository | Name | Version |
 |------------|------|---------|
-| file://../open5gs-amf | amf(open5gs-amf) | ~2.3.1 |
-| file://../open5gs-ausf | ausf(open5gs-ausf) | ~2.3.1 |
-| file://../open5gs-bsf | bsf(open5gs-bsf) | ~2.3.1 |
-| file://../open5gs-hss | hss(open5gs-hss) | ~2.3.0 |
-| file://../open5gs-mme | mme(open5gs-mme) | ~2.3.0 |
-| file://../open5gs-nrf | nrf(open5gs-nrf) | ~2.3.1 |
-| file://../open5gs-nssf | nssf(open5gs-nssf) | ~2.3.1 |
-| file://../open5gs-pcf | pcf(open5gs-pcf) | ~2.3.1 |
-| file://../open5gs-pcrf | pcrf(open5gs-pcrf) | ~2.3.0 |
-| file://../open5gs-scp | scp(open5gs-scp) | ~2.3.1 |
-| file://../open5gs-sepp | sepp(open5gs-sepp) | ~2.3.1 |
-| file://../open5gs-sgwc | sgwc(open5gs-sgwc) | ~2.3.0 |
-| file://../open5gs-sgwu | sgwu(open5gs-sgwu) | ~2.3.0 |
-| file://../open5gs-smf | smf(open5gs-smf) | ~2.3.1 |
-| file://../open5gs-udm | udm(open5gs-udm) | ~2.3.1 |
-| file://../open5gs-udr | udr(open5gs-udr) | ~2.3.1 |
-| file://../open5gs-upf | upf(open5gs-upf) | ~2.3.2 |
-| file://../open5gs-webui | webui(open5gs-webui) | ~2.3.1 |
+| file://../open5gs-amf | amf(open5gs-amf) | ~2.3.3 |
+| file://../open5gs-ausf | ausf(open5gs-ausf) | ~2.3.2 |
+| file://../open5gs-bsf | bsf(open5gs-bsf) | ~2.3.2 |
+| file://../open5gs-hss | hss(open5gs-hss) | ~2.3.1 |
+| file://../open5gs-mme | mme(open5gs-mme) | ~2.3.1 |
+| file://../open5gs-nrf | nrf(open5gs-nrf) | ~2.3.2 |
+| file://../open5gs-nssf | nssf(open5gs-nssf) | ~2.3.2 |
+| file://../open5gs-pcf | pcf(open5gs-pcf) | ~2.3.2 |
+| file://../open5gs-pcrf | pcrf(open5gs-pcrf) | ~2.3.1 |
+| file://../open5gs-scp | scp(open5gs-scp) | ~2.3.2 |
+| file://../open5gs-sepp | sepp(open5gs-sepp) | ~2.3.2 |
+| file://../open5gs-sgwc | sgwc(open5gs-sgwc) | ~2.3.1 |
+| file://../open5gs-sgwu | sgwu(open5gs-sgwu) | ~2.3.1 |
+| file://../open5gs-smf | smf(open5gs-smf) | ~2.3.2 |
+| file://../open5gs-udm | udm(open5gs-udm) | ~2.3.2 |
+| file://../open5gs-udr | udr(open5gs-udr) | ~2.3.2 |
+| file://../open5gs-upf | upf(open5gs-upf) | ~2.3.3 |
+| file://../open5gs-webui | webui(open5gs-webui) | ~2.3.2 |
 | https://charts.bitnami.com/bitnami | common | 2.x.x |
 | https://charts.bitnami.com/bitnami | mongodb | ~18.0.5 |
 
@@ -65,7 +65,7 @@ Helm chart to deploy Open5gs services on Kubernetes.
 | populate.image.registry | string | `"docker.io"` |  |
 | populate.image.repository | string | `"gradiant/open5gs-dbctl"` |  |
 | populate.image.tag | string | `"0.10.3"` |  |
-| populate.initCommands | list | `[]` |  |
+| populate.subscribers | list | `[]` |  |
 | scp.enabled | bool | `true` |  |
 | scp.mongodb.enabled | bool | `false` |  |
 | sepp.enabled | bool | `true` |  |

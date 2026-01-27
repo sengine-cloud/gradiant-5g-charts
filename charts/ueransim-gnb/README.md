@@ -1,6 +1,6 @@
 # ueransim-gnb
 
-![Version: 0.2.6](https://img.shields.io/badge/Version-0.2.6-informational?style=flat-square) ![AppVersion: 3.2.6](https://img.shields.io/badge/AppVersion-3.2.6-informational?style=flat-square)
+![Version: 0.2.8](https://img.shields.io/badge/Version-0.2.8-informational?style=flat-square) ![AppVersion: 3.2.6](https://img.shields.io/badge/AppVersion-3.2.6-informational?style=flat-square)
 
 ueransim gNodeB for 5G RAN simulation
 
@@ -10,8 +10,7 @@ ueransim gNodeB for 5G RAN simulation
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| cgiraldo | <cgiraldo@gradiant.org> |  |
-| avrodriguez | <avrodriguez@gradiant.org> |  |
+| impuls42 | <alex@sengine.cloud> |  |
 
 ## Source Code
 
@@ -66,7 +65,7 @@ ueransim gNodeB for 5G RAN simulation
 | ues.affinity | object | `{}` |  |
 | ues.apnList[0].apn | string | `"internet"` |  |
 | ues.apnList[0].emergency | bool | `false` |  |
-| ues.apnList[0].slice.sd | string | `"0x111111"` |  |
+| ues.apnList[0].slice.sd | string | `"0x000001"` |  |
 | ues.apnList[0].slice.sst | int | `1` |  |
 | ues.apnList[0].type | string | `"IPv4"` |  |
 | ues.containerSecurityContext.enabled | bool | `false` |  |

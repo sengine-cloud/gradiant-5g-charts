@@ -1,6 +1,6 @@
 # srsran-4g-enb
 
-![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![AppVersion: 23.11](https://img.shields.io/badge/AppVersion-23.11-informational?style=flat-square)
+![Version: 0.2.1](https://img.shields.io/badge/Version-0.2.1-informational?style=flat-square) ![AppVersion: 23.11](https://img.shields.io/badge/AppVersion-23.11-informational?style=flat-square)
 
 srsRAN enodeb
 
@@ -10,7 +10,7 @@ srsRAN enodeb
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| cgiraldo | <cgiraldo@gradiant.org> |  |
+| impuls42 | <alex@sengine.cloud> |  |
 
 ## Source Code
 
