@@ -1,27 +1,25 @@
-# free5gc-udm
+# srsran-5g-zmq
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![AppVersion: 3.4.2](https://img.shields.io/badge/AppVersion-3.4.2-informational?style=flat-square)
+![Version: 1.0.1](https://img.shields.io/badge/Version-1.0.1-informational?style=flat-square) ![AppVersion: 23.10.1](https://img.shields.io/badge/AppVersion-23.10.1-informational?style=flat-square)
 
-Helm chart to deploy Free5GC UDM service on Kubernetes.
-
-**Homepage:** <https://github.com/gradiant/5g-charts>
+Helm chart to deploy srsRAN 5G gNB on Kubernetes.
 
 ## Maintainers
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| cgiraldo | <cgiraldo@gradiant.org> |  |
 | avrodriguez | <avrodriguez@gradiant.org> |  |
 
 ## Source Code
 
-* <http://free5gc.org>
+* <https://github.com/sengine-cloud/gradiant-5g-charts>
+* <https://github.com/srsran/srsRAN_Project>
 
 ## Requirements
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | common | 2.x.x |
+| https://charts.bitnami.com/bitnami | common | 1.x.x |
 
 ## Values
 
@@ -32,22 +30,32 @@ Helm chart to deploy Free5GC UDM service on Kubernetes.
 | command | list | `[]` |  |
 | commonAnnotations | object | `{}` |  |
 | commonLabels | object | `{}` |  |
-| config.logger.level | string | `"info"` |  |
-| config.nrfUri | string | `""` |  |
-| config.sbi.bindingIPv4 | string | `""` |  |
-| config.sbi.registerIPv4 | string | `""` |  |
-| containerPorts.sbi | int | `8000` |  |
+| config.amf.bind_interface | string | `"eth0"` |  |
+| config.amf.hostname | string | `"open5gs-amf-ngap"` |  |
+| config.cell_cfg.band | int | `3` |  |
+| config.cell_cfg.channel_bandwidth_MHz | int | `20` |  |
+| config.cell_cfg.common_scs | int | `15` |  |
+| config.cell_cfg.dl_arfcn | int | `368500` |  |
+| config.cell_cfg.plmn | string | `"99970"` |  |
+| config.cell_cfg.tac | int | `1` |  |
+| config.ru_sdr.device_args | string | `"tx_port=tcp://127.0.0.1:2000,rx_port=tcp://127.0.0.1:2001,id=gnb,base_srate=23.04e6"` |  |
+| config.ru_sdr.device_driver | string | `"zmq"` |  |
+| config.ru_sdr.rx_gain | int | `75` |  |
+| config.ru_sdr.srate | float | `23.04` |  |
+| config.ru_sdr.tx_gain | int | `75` |  |
+| config.slicing[0].sd | int | `1118481` |  |
+| config.slicing[0].sst | int | `1` |  |
+| containerPorts.gtpu | int | `2152` |  |
+| containerSecurityContext.capabilities.add[0] | string | `"NET_ADMIN"` |  |
 | containerSecurityContext.enabled | bool | `true` |  |
-| containerSecurityContext.runAsNonRoot | bool | `true` |  |
-| containerSecurityContext.runAsUser | int | `1001` |  |
+| containerSecurityContext.privileged | bool | `true` |  |
 | customLivenessProbe | object | `{}` |  |
 | customReadinessProbe | object | `{}` |  |
 | customStartupProbe | object | `{}` |  |
 | extraDeploy | list | `[]` |  |
+| extraEnvVars | list | `[]` |  |
 | extraEnvVarsCM | string | `""` |  |
 | extraEnvVarsSecret | string | `""` |  |
-| extraEnvVars[0].name | string | `"GIN_MODE"` |  |
-| extraEnvVars[0].value | string | `"release"` |  |
 | extraVolumeMounts | list | `[]` |  |
 | extraVolumes | list | `[]` |  |
 | fullnameOverride | string | `""` |  |
@@ -55,13 +63,12 @@ Helm chart to deploy Free5GC UDM service on Kubernetes.
 | global.imageRegistry | string | `""` |  |
 | global.storageClass | string | `""` |  |
 | hostAliases | list | `[]` |  |
-| image.debug | bool | `false` |  |
-| image.digest | string | `""` |  |
-| image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.pullSecrets | list | `[]` |  |
-| image.registry | string | `"docker.io"` |  |
-| image.repository | string | `"free5gc/udm"` |  |
-| image.tag | string | `"v3.4.2"` |  |
+| image.srsran.debug | bool | `false` |  |
+| image.srsran.digest | string | `""` |  |
+| image.srsran.pullPolicy | string | `"IfNotPresent"` |  |
+| image.srsran.registry | string | `"docker.io"` |  |
+| image.srsran.repository | string | `"gradiant/srsran-5g"` |  |
+| image.srsran.tag | string | `"23_10_1"` |  |
 | initContainers | list | `[]` |  |
 | kubeVersion | string | `""` |  |
 | lifecycleHooks | object | `{}` |  |
@@ -81,7 +88,7 @@ Helm chart to deploy Free5GC UDM service on Kubernetes.
 | podAnnotations | object | `{}` |  |
 | podAntiAffinityPreset | string | `"soft"` |  |
 | podLabels | object | `{}` |  |
-| podSecurityContext.enabled | bool | `true` |  |
+| podSecurityContext.enabled | bool | `false` |  |
 | podSecurityContext.fsGroup | int | `1001` |  |
 | priorityClassName | string | `""` |  |
 | readinessProbe.enabled | bool | `true` |  |
@@ -98,17 +105,17 @@ Helm chart to deploy Free5GC UDM service on Kubernetes.
 | serviceAccount.automountServiceAccountToken | bool | `true` |  |
 | serviceAccount.create | bool | `false` |  |
 | serviceAccount.name | string | `""` |  |
-| services.sbi.annotations | object | `{}` |  |
-| services.sbi.clusterIP | string | `""` |  |
-| services.sbi.externalTrafficPolicy | string | `"Cluster"` |  |
-| services.sbi.extraPorts | list | `[]` |  |
-| services.sbi.loadBalancerIP | string | `""` |  |
-| services.sbi.loadBalancerSourceRanges | list | `[]` |  |
-| services.sbi.nodePorts.sbi | string | `""` |  |
-| services.sbi.ports.sbi | int | `8000` |  |
-| services.sbi.sessionAffinity | string | `"None"` |  |
-| services.sbi.sessionAffinityConfig | object | `{}` |  |
-| services.sbi.type | string | `"ClusterIP"` |  |
+| services.gtpu.annotations | object | `{}` |  |
+| services.gtpu.clusterIP | string | `""` |  |
+| services.gtpu.externalTrafficPolicy | string | `"Cluster"` |  |
+| services.gtpu.extraPorts | list | `[]` |  |
+| services.gtpu.loadBalancerIP | string | `""` |  |
+| services.gtpu.loadBalancerSourceRanges | list | `[]` |  |
+| services.gtpu.nodePorts.gtpu | string | `""` |  |
+| services.gtpu.ports.gtpu | int | `2152` |  |
+| services.gtpu.sessionAffinity | string | `"None"` |  |
+| services.gtpu.sessionAffinityConfig | object | `{}` |  |
+| services.gtpu.type | string | `"ClusterIP"` |  |
 | sessionAffinity | string | `"None"` |  |
 | sidecars | list | `[]` |  |
 | startupProbe.enabled | bool | `false` |  |
@@ -118,7 +125,18 @@ Helm chart to deploy Free5GC UDM service on Kubernetes.
 | startupProbe.periodSeconds | int | `10` |  |
 | startupProbe.successThreshold | int | `1` |  |
 | startupProbe.timeoutSeconds | int | `5` |  |
-| tolerations | list | `[]` |  |
 | topologySpreadConstraints | list | `[]` |  |
+| ue.config.imei | string | `"353490069873319"` |  |
+| ue.config.imsi | string | `"999700000000001"` |  |
+| ue.config.k | string | `"465B5CE8B199B49FAA5F0A2EE238A6BC"` |  |
+| ue.config.opc | string | `"E8ED289DEBA952E4283B54E88E6183CA"` |  |
+| ue.config.resources | object | `{}` |  |
+| ue.image.digest | string | `""` |  |
+| ue.image.pullPolicy | string | `"IfNotPresent"` |  |
+| ue.image.registry | string | `"docker.io"` |  |
+| ue.image.repository | string | `"gradiant/srsran-4g"` |  |
+| ue.image.tag | string | `"23_11"` |  |
 | updateStrategy.type | string | `"RollingUpdate"` |  |
 
+----------------------------------------------
+Autogenerated from chart metadata using [helm-docs v1.14.2](https://github.com/norwoodj/helm-docs/releases/v1.14.2)

@@ -104,7 +104,7 @@ ues:
       apn: 'internet'
       slice:
         sst: 1
-        sd: "0x111111"
+        sd: "0x000001"
       emergency: false
   resources:
     limits: {}

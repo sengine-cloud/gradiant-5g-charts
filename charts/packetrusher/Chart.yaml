@@ -6,8 +6,8 @@ home: https://github.com/gradiant/5g-charts
 sources:
   - https://github.com/HewlettPackard/PacketRusher
 maintainers:
-- email: avrodriguez@gradiant.org
-  name: avrodriguez
+  - email: alex@sengine.cloud
+    name: impuls42
 name: packetrusher
 version: 0.0.3
 annotations:

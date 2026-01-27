@@ -1,30 +1,33 @@
-name: Helm Publish
+name: Release Charts
 
 on:
   push:
-    branches: [ 'master', 'main' ]
+    branches: ["master", "main"]
     paths-ignore:
-      - '.github/**'
-      - '.git*'
-      - 'README.md'
-      - 'renovate.json5?'
+      - ".github/**"
+      - ".git*"
+      - "README.md"
+      - "renovate.json5?"
   workflow_dispatch:
 
 jobs:
-  helm:
+  release:
     permissions:
-      contents: read
+      contents: write
       packages: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install Helm
-        uses: azure/setup-helm@v4
-
-      - name: Build and Push the Helm Charts to GitHub Container Registry
-        uses: JimCronqvist/action-helm-chart-repo@0.1.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          chartsPath: ".charts/"
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.7.0
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

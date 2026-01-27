@@ -19,10 +19,8 @@ keywords:
   - k8s
   - gradiant
 maintainers:
-  - email: cgiraldo@gradiant.org
-    name: cgiraldo
-  - email: avrodriguez@gradiant.org
-    name: avrodriguez
+  - email: alex@sengine.cloud
+    name: impuls42
 name: ueransim-ues
 sources:
   - https://github.com/aligungr/UERANSIM

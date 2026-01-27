@@ -19,8 +19,8 @@ keywords:
   - gradiant
   - k8s
 maintainers:
-  - email: admin@gradiant.org
-    name: Gradiant
+  - email: alex@sengine.cloud
+    name: impuls42
 name: oai-gnb
 sources:
   - https://gitlab.eurecom.fr/oai/openairinterface5g/

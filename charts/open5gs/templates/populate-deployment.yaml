@@ -1,4 +1,4 @@
-{{- if .Values.populate.enabled }}
+{{- if and .Values.populate.enabled .Values.populate.subscribers }}
 apiVersion: {{ include "common.capabilities.deployment.apiVersion" . }}
 kind: Deployment
 metadata:
@@ -29,10 +29,37 @@ spec:
         env:
         - name: DB_URI
           value: {{ tpl .Values.dbURI . }}
-        command: 
+        command:
         - /bin/bash
         - -c
-        - {{ join "&&" .Values.populate.initCommands | quote }}
+        - |
+          set -e
+
+          add_subscriber_idempotent() {
+            local imsi="$1"
+            local ki="$2"
+            local opc="$3"
+            local apn="${4:-internet}"
+            local sst="${5:-1}"
+            local sd="${6:-000001}"
+
+            # Check if subscriber already exists
+            exists=$(mongosh --quiet --eval "db.subscribers.countDocuments({imsi: \"$imsi\"})" "$DB_URI" 2>/dev/null | tail -1)
+
+            if [ "$exists" -gt 0 ]; then
+              echo "Subscriber $imsi already exists - skipping"
+              return 0
+            fi
+
+            echo "Creating subscriber $imsi..."
+            open5gs-dbctl add_ue_with_slice "$imsi" "$ki" "$opc" "$apn" "$sst" "$sd"
+          }
+
+          {{- range .Values.populate.subscribers }}
+          add_subscriber_idempotent {{ .imsi | quote }} {{ .ki | quote }} {{ .opc | quote }} {{ .apn | default "internet" | quote }} {{ .sst | default 1 }} {{ .sd | default "000001" | quote }}
+          {{- end }}
+
+          echo "Subscriber provisioning complete"
       containers:
       - name: populate
         image: {{ template "open5gs.populate.image" . }}
@@ -40,7 +67,7 @@ spec:
         env:
         - name: DB_URI
           value: {{ tpl .Values.dbURI . }}
-        command: 
+        command:
         - /bin/bash
         - -c
         - "tail -f /dev/null"
