@@ -10,7 +10,6 @@ dependencies:
       - bitnami-common
     version: 1.x.x
 description: ueransim UEs for 5G RAN simulation
-engine: gotpl
 home: https://github.com/aligungr/UERANSIM
 icon: https://github.com/aligungr/UERANSIM/raw/master/.github/logo.png
 keywords:
@@ -24,4 +23,4 @@ maintainers:
 name: ueransim-ues
 sources:
   - https://github.com/aligungr/UERANSIM
-version: 0.1.2
+version: 0.1.3
