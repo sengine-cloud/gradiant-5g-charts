@@ -24,51 +24,69 @@ mongodb:
     enabled: false
 smf:
   enabled: true
+  nameOverride: smf
 upf:
   enabled: true
+  nameOverride: upf
 webui:
   enabled: true
+  nameOverride: webui
 
 # 4G
 hss:
   enabled: true
+  nameOverride: hss
   mongodb:
     enabled: false
 mme:
   enabled: true
+  nameOverride: mme
 pcrf:
   enabled: true
+  nameOverride: pcrf
   mongodb:
     enabled: false
 sgwc:
   enabled: true
+  nameOverride: sgwc
 sgwu:
   enabled: true
+  nameOverride: sgwu
 
 # 5G
 amf:
   enabled: true
+  nameOverride: amf
 ausf:
   enabled: true
+  nameOverride: ausf
 bsf:
   enabled: true
+  nameOverride: bsf
 nrf:
   enabled: true
+  nameOverride: nrf
 nssf:
   enabled: true
+  nameOverride: nssf
 pcf:
   enabled: true
+  nameOverride: pcf
   mongodb:
     enabled: false
 scp:
   enabled: true
+  nameOverride: scp
   mongodb:
     enabled: false
 sepp:
   enabled: true
+  nameOverride: sepp
 udm:
   enabled: true
+  nameOverride: udm
 udr:
   enabled: true
+  nameOverride: udr
   mongodb:
     enabled: false

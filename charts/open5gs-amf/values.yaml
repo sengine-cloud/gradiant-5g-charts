@@ -530,3 +530,8 @@ metrics:
     ## @param metrics.serviceScrape.additionalLabels Additional labels that can be used so VMServiceScrape resource(s) can be discovered by VictoriaMetrics
     ##
     additionalLabels: {}
+
+## @section Autoscaling parameters
+autoscaling:
+  ## @param autoscaling.maxReplicas Maximum number of replicas for HPA
+  maxReplicas: 1

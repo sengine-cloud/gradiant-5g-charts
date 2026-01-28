@@ -381,3 +381,8 @@ services:
     ##     timeoutSeconds: 300
     ##
     sessionAffinityConfig: {}
+
+## @section Autoscaling parameters
+autoscaling:
+  ## @param autoscaling.maxReplicas Maximum number of replicas for HPA
+  maxReplicas: 1

@@ -462,3 +462,8 @@ dbURI: ""  # if empty default is mongodb://{{ mongodb fullname }}/open5gs
 mongodb:
   # mongodb.enabled -- should be deployed with udr
   enabled: false
+
+## @section Autoscaling parameters
+autoscaling:
+  ## @param autoscaling.maxReplicas Maximum number of replicas for HPA
+  maxReplicas: 1

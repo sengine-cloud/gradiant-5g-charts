@@ -10,7 +10,7 @@ maintainers:
   - email: alex@sengine.cloud
     name: impuls42
 name: open5gs-webui
-version: 2.3.2
+version: 2.3.3
 annotations:
   artifacthub.io/category: networking
 keywords:

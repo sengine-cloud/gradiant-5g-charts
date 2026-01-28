@@ -10,7 +10,7 @@ maintainers:
   - email: alex@sengine.cloud
     name: impuls42
 name: open5gs-hss
-version: 2.3.1
+version: 2.3.2
 annotations:
   artifacthub.io/category: networking
 keywords:

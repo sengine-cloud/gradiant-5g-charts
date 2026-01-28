@@ -522,3 +522,8 @@ metrics:
 
 open5gs-smf:
   enabled: false
+
+## @section Autoscaling parameters
+autoscaling:
+  ## @param autoscaling.maxReplicas Maximum number of replicas for HPA
+  maxReplicas: 10
