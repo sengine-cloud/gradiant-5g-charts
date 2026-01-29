@@ -41,7 +41,7 @@ commonLabels: {}
 ##
 extraDeploy: []
 
-open5gsNameOverride: "" 
+open5gsNameOverride: ""
 
 ## @section open5gs-hss parameters
 
