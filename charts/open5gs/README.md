@@ -1,6 +1,6 @@
 # open5gs
 
-![Version: 2.3.8](https://img.shields.io/badge/Version-2.3.8-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
+![Version: 2.3.9](https://img.shields.io/badge/Version-2.3.9-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
 
 Helm chart to deploy Open5gs services on Kubernetes.
 
@@ -23,17 +23,17 @@ Helm chart to deploy Open5gs services on Kubernetes.
 | file://../open5gs-amf | amf(open5gs-amf) | ~2.3.5 |
 | file://../open5gs-ausf | ausf(open5gs-ausf) | ~2.3.4 |
 | file://../open5gs-bsf | bsf(open5gs-bsf) | ~2.3.4 |
-| file://../open5gs-hss | hss(open5gs-hss) | ~2.3.2 |
-| file://../open5gs-mme | mme(open5gs-mme) | ~2.3.3 |
+| file://../open5gs-hss | hss(open5gs-hss) | ~2.3.3 |
+| file://../open5gs-mme | mme(open5gs-mme) | ~2.3.4 |
 | file://../open5gs-nrf | nrf(open5gs-nrf) | ~2.3.3 |
 | file://../open5gs-nssf | nssf(open5gs-nssf) | ~2.3.4 |
 | file://../open5gs-pcf | pcf(open5gs-pcf) | ~2.3.4 |
-| file://../open5gs-pcrf | pcrf(open5gs-pcrf) | ~2.3.2 |
+| file://../open5gs-pcrf | pcrf(open5gs-pcrf) | ~2.3.3 |
 | file://../open5gs-scp | scp(open5gs-scp) | ~2.3.4 |
 | file://../open5gs-sepp | sepp(open5gs-sepp) | ~2.3.4 |
 | file://../open5gs-sgwc | sgwc(open5gs-sgwc) | ~2.3.3 |
 | file://../open5gs-sgwu | sgwu(open5gs-sgwu) | ~2.3.3 |
-| file://../open5gs-smf | smf(open5gs-smf) | ~2.3.4 |
+| file://../open5gs-smf | smf(open5gs-smf) | ~2.3.5 |
 | file://../open5gs-udm | udm(open5gs-udm) | ~2.3.4 |
 | file://../open5gs-udr | udr(open5gs-udr) | ~2.3.4 |
 | file://../open5gs-upf | upf(open5gs-upf) | ~2.3.5 |
