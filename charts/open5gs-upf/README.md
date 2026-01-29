@@ -1,6 +1,6 @@
 # open5gs-upf
 
-![Version: 2.3.3](https://img.shields.io/badge/Version-2.3.3-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
+![Version: 2.3.5](https://img.shields.io/badge/Version-2.3.5-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
 
 Helm chart to deploy Open5gs UPF service on Kubernetes.
 
@@ -28,6 +28,7 @@ Helm chart to deploy Open5gs UPF service on Kubernetes.
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
 | args | list | `[]` |  |
+| autoscaling.maxReplicas | int | `10` |  |
 | command | list | `[]` |  |
 | commonAnnotations | object | `{}` |  |
 | commonLabels | object | `{}` |  |
@@ -95,6 +96,7 @@ Helm chart to deploy Open5gs UPF service on Kubernetes.
 | nodeAffinityPreset.values | list | `[]` |  |
 | nodeSelector | object | `{}` |  |
 | open5gs-smf.enabled | bool | `false` |  |
+| open5gsNameOverride | string | `""` |  |
 | podAffinityPreset | string | `""` |  |
 | podAnnotations | object | `{}` |  |
 | podAntiAffinityPreset | string | `"soft"` |  |

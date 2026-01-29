@@ -1,6 +1,6 @@
 # open5gs-nssf
 
-![Version: 2.3.2](https://img.shields.io/badge/Version-2.3.2-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
+![Version: 2.3.4](https://img.shields.io/badge/Version-2.3.4-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
 
 Helm chart to deploy Open5gs NSSF service on Kubernetes.
 
@@ -28,6 +28,7 @@ Helm chart to deploy Open5gs NSSF service on Kubernetes.
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
 | args | list | `[]` |  |
+| autoscaling.maxReplicas | int | `1` |  |
 | command | list | `[]` |  |
 | commonAnnotations | object | `{}` |  |
 | commonLabels | object | `{}` |  |
@@ -80,6 +81,7 @@ Helm chart to deploy Open5gs NSSF service on Kubernetes.
 | nodeAffinityPreset.type | string | `""` |  |
 | nodeAffinityPreset.values | list | `[]` |  |
 | nodeSelector | object | `{}` |  |
+| open5gsNameOverride | string | `""` |  |
 | podAffinityPreset | string | `""` |  |
 | podAnnotations | object | `{}` |  |
 | podAntiAffinityPreset | string | `"soft"` |  |
