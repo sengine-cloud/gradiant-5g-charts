@@ -9,7 +9,7 @@ maintainers:
   - email: alex@sengine.cloud
     name: impuls42
 name: srsran-4g-zmq
-version: 0.2.1
+version: 0.2.2
 annotations:
   artifacthub.io/category: networking
 keywords:
