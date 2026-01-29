@@ -637,6 +637,129 @@ entries:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
+    created: "2026-01-29T11:09:08.304456168Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: ~18.0.5
+    - alias: amf
+      condition: amf.enabled
+      name: open5gs-amf
+      repository: file://../open5gs-amf
+      version: ~2.3.5
+    - alias: ausf
+      condition: ausf.enabled
+      name: open5gs-ausf
+      repository: file://../open5gs-ausf
+      version: ~2.3.4
+    - alias: bsf
+      condition: bsf.enabled
+      name: open5gs-bsf
+      repository: file://../open5gs-bsf
+      version: ~2.3.4
+    - alias: hss
+      condition: hss.enabled
+      name: open5gs-hss
+      repository: file://../open5gs-hss
+      version: ~2.3.2
+    - alias: mme
+      condition: mme.enabled
+      name: open5gs-mme
+      repository: file://../open5gs-mme
+      version: ~2.3.3
+    - alias: nrf
+      condition: nrf.enabled
+      name: open5gs-nrf
+      repository: file://../open5gs-nrf
+      version: ~2.3.3
+    - alias: nssf
+      condition: nssf.enabled
+      name: open5gs-nssf
+      repository: file://../open5gs-nssf
+      version: ~2.3.4
+    - alias: pcf
+      condition: pcf.enabled
+      name: open5gs-pcf
+      repository: file://../open5gs-pcf
+      version: ~2.3.4
+    - alias: pcrf
+      condition: pcrf.enabled
+      name: open5gs-pcrf
+      repository: file://../open5gs-pcrf
+      version: ~2.3.2
+    - alias: scp
+      condition: scp.enabled
+      name: open5gs-scp
+      repository: file://../open5gs-scp
+      version: ~2.3.4
+    - alias: sepp
+      condition: sepp.enabled
+      name: open5gs-sepp
+      repository: file://../open5gs-sepp
+      version: ~2.3.4
+    - alias: sgwc
+      condition: sgwc.enabled
+      name: open5gs-sgwc
+      repository: file://../open5gs-sgwc
+      version: ~2.3.3
+    - alias: sgwu
+      condition: sgwu.enabled
+      name: open5gs-sgwu
+      repository: file://../open5gs-sgwu
+      version: ~2.3.3
+    - alias: smf
+      condition: smf.enabled
+      name: open5gs-smf
+      repository: file://../open5gs-smf
+      version: ~2.3.4
+    - alias: udm
+      condition: udm.enabled
+      name: open5gs-udm
+      repository: file://../open5gs-udm
+      version: ~2.3.4
+    - alias: udr
+      condition: udr.enabled
+      name: open5gs-udr
+      repository: file://../open5gs-udr
+      version: ~2.3.4
+    - alias: upf
+      condition: upf.enabled
+      name: open5gs-upf
+      repository: file://../open5gs-upf
+      version: ~2.3.5
+    - alias: webui
+      condition: webui.enabled
+      name: open5gs-webui
+      repository: file://../open5gs-webui
+      version: ~2.3.3
+    description: 'Helm chart to deploy Open5gs services on Kubernetes. '
+    digest: f9ee5d90cd517a30c253152f96e7860b5e386c7cb3e2fffa85856814d4401d22
+    home: https://github.com/sengine-cloud/gradiant-5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - epc
+    - ngc
+    - gradiant
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-2.3.8/open5gs-2.3.8.tgz
+    version: 2.3.8
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
     created: "2026-01-29T09:53:15.52499059Z"
     dependencies:
     - name: common
@@ -1007,6 +1130,34 @@ entries:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
+    created: "2026-01-29T11:09:08.501265718Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: 'Helm chart to deploy Open5gs AMF service on Kubernetes. '
+    digest: 81c4b4765eb58af75d15943f81a34743a0603d524252b75db0cc5d4f2eac6310
+    home: https://github.com/sengine-cloud/gradiant-5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - ngc
+    - gradiant
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-amf
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-amf-2.3.5/open5gs-amf-2.3.5.tgz
+    version: 2.3.5
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
     created: "2026-01-29T09:53:15.705423224Z"
     dependencies:
     - name: common
@@ -1092,6 +1243,33 @@ entries:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
+    created: "2026-01-29T11:09:08.690566149Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: 'Helm chart to deploy Open5gs AUSF service on Kubernetes. '
+    digest: b8c880aa206edb23c5c1a44af8e8d2b47702d4ddeaa922219f59f3e47e5b3781
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - ngc
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-ausf
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-ausf-2.3.4/open5gs-ausf-2.3.4.tgz
+    version: 2.3.4
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
     created: "2026-01-29T09:53:15.917686773Z"
     dependencies:
     - name: common
@@ -1170,6 +1348,33 @@ entries:
     - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-ausf-2.3.1/open5gs-ausf-2.3.1.tgz
     version: 2.3.1
   open5gs-bsf:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
+    created: "2026-01-29T11:09:08.886271132Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: 'Helm chart to deploy Open5gs BSF service on Kubernetes. '
+    digest: 2a7d47ff55b6d207abc9ba6f8ac19ed3ae0a658bae350ecce0be9b08c80af739
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - ngc
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-bsf
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-bsf-2.3.4/open5gs-bsf-2.3.4.tgz
+    version: 2.3.4
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
@@ -1356,6 +1561,34 @@ entries:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
+    created: "2026-01-29T11:09:09.113876394Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: 'Helm chart to deploy Open5gs MME service on Kubernetes. '
+    digest: e5dd9bb5f804d938f60e60087d1f2da2c081c0e089358ea3b83c91c404e2131f
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - epc
+    - ngc
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-mme
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-mme-2.3.3/open5gs-mme-2.3.3.tgz
+    version: 2.3.3
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
     created: "2026-01-29T09:53:16.660223219Z"
     dependencies:
     - name: common
@@ -1526,6 +1759,33 @@ entries:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
+    created: "2026-01-29T11:09:09.296106084Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: 'Helm chart to deploy Open5gs NSSF service on Kubernetes. '
+    digest: 57c0cbd234b999d5db3542f06b10fcfea97b7d580ee4aaa986e2472a894d9009
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - ngc
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-nssf
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-nssf-2.3.4/open5gs-nssf-2.3.4.tgz
+    version: 2.3.4
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
     created: "2026-01-29T09:53:17.136920365Z"
     dependencies:
     - name: common
@@ -1604,6 +1864,38 @@ entries:
     - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-nssf-2.3.1/open5gs-nssf-2.3.1.tgz
     version: 2.3.1
   open5gs-pcf:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
+    created: "2026-01-29T11:09:09.47811774Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: ~18.0.5
+    description: 'Helm chart to deploy Open5gs PCF service on Kubernetes. '
+    digest: 1ec63005ac978b0b0a2cde8cc861a76a64c43cbec562256c483cc7b985dea451
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - ngc
+    - gradiant
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-pcf
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-pcf-2.3.4/open5gs-pcf-2.3.4.tgz
+    version: 2.3.4
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
@@ -1805,6 +2097,39 @@ entries:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
+    created: "2026-01-29T11:09:09.701970661Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: ~18.0.5
+    description: 'Helm chart to deploy Open5gs scp service on Kubernetes. '
+    digest: 5dac0ab0850bd3f9ae49c4e2a054ace63274d671878ea746e63cc4330315416a
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - epc
+    - ngc
+    - gradiant
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-scp
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-scp-2.3.4/open5gs-scp-2.3.4.tgz
+    version: 2.3.4
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
     created: "2026-01-29T09:53:17.783144565Z"
     dependencies:
     - name: common
@@ -1905,6 +2230,35 @@ entries:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
+    created: "2026-01-29T11:09:09.874097508Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: 'Helm chart to deploy Open5gs sepp service on Kubernetes. '
+    digest: 92c0f36bfe7c840834b78dc6ac6f7e22ac0865e9efd9db8be7dc93c3d7eb12d0
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - epc
+    - ngc
+    - gradiant
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-sepp
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-sepp-2.3.4/open5gs-sepp-2.3.4.tgz
+    version: 2.3.4
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
     created: "2026-01-29T09:53:17.995683088Z"
     dependencies:
     - name: common
@@ -1993,6 +2347,33 @@ entries:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
+    created: "2026-01-29T11:09:10.072318604Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: 'Helm chart to deploy Open5gs SGWC service on Kubernetes. '
+    digest: 6a685d4e0649ccd5d18e1854964ec503b454048471f98b3c855ed63494cb1c1b
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - ngc
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-sgwc
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-sgwc-2.3.3/open5gs-sgwc-2.3.3.tgz
+    version: 2.3.3
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
     created: "2026-01-29T09:53:18.201190574Z"
     dependencies:
     - name: common
@@ -2071,6 +2452,33 @@ entries:
     - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-sgwc-2.3.0/open5gs-sgwc-2.3.0.tgz
     version: 2.3.0
   open5gs-sgwu:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
+    created: "2026-01-29T11:09:10.266248976Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: 'Helm chart to deploy Open5gs SGWU service on Kubernetes. '
+    digest: 2964a23a7d1cd8db1d0331e64e1ab9f8f1f364fbd58d460a92ad85014bfc8969
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - ngc
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-sgwu
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-sgwu-2.3.3/open5gs-sgwu-2.3.3.tgz
+    version: 2.3.3
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
@@ -2157,6 +2565,33 @@ entries:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.5
+    created: "2026-01-29T11:09:10.476165802Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: 'Helm chart to deploy Open5gs SMF service on Kubernetes. '
+    digest: dbf45ee25f987258bac7a0191cf31763fe257a8268768b6f8997d98dc6e04611
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - ngc
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-smf
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-smf-2.3.4/open5gs-smf-2.3.4.tgz
+    version: 2.3.4
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
     created: "2026-01-29T09:53:18.620714492Z"
     dependencies:
     - name: common
@@ -2235,6 +2670,34 @@ entries:
     - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-smf-2.3.1/open5gs-smf-2.3.1.tgz
     version: 2.3.1
   open5gs-udm:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
+    created: "2026-01-29T11:09:10.678270375Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: 'Helm chart to deploy Open5gs UDM service on Kubernetes. '
+    digest: bbef91226dbb6b23035a334fcccdb341745b6819331a657482b03a9961b1ed67
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - ngc
+    - gradiant
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-udm
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-udm-2.3.4/open5gs-udm-2.3.4.tgz
+    version: 2.3.4
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
@@ -2320,6 +2783,38 @@ entries:
     - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-udm-2.3.1/open5gs-udm-2.3.1.tgz
     version: 2.3.1
   open5gs-udr:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
+    created: "2026-01-29T11:09:10.899606277Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: ~18.0.5
+    description: 'Helm chart to deploy Open5gs UDR service on Kubernetes. '
+    digest: d7e40a805e10ba901f452455b9672e90343d3c22e06f3d65bf2982a5b1d2f4d9
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - ngc
+    - gradiant
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-udr
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-udr-2.3.4/open5gs-udr-2.3.4.tgz
+    version: 2.3.4
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
@@ -2417,6 +2912,34 @@ entries:
     - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-udr-2.3.1/open5gs-udr-2.3.1.tgz
     version: 2.3.1
   open5gs-upf:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 2.7.5
+    created: "2026-01-29T11:09:11.053140625Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: 'Helm chart to deploy Open5gs UPF service on Kubernetes. '
+    digest: 60ef7d229dd2e775f18f89d22203cd50bb4d90538cd10f7140532932fc1dfabb
+    home: https://github.com/gradiant/5g-charts
+    icon: https://open5gs.org/assets/img/open5gs-logo.png
+    keywords:
+    - network
+    - ngc
+    - gradiant
+    maintainers:
+    - email: alex@sengine.cloud
+      name: impuls42
+    name: open5gs-upf
+    sources:
+    - http://open5gs.org
+    urls:
+    - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/open5gs-upf-2.3.5/open5gs-upf-2.3.5.tgz
+    version: 2.3.5
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
@@ -3118,4 +3641,4 @@ entries:
     urls:
     - https://github.com/sengine-cloud/gradiant-5g-charts/releases/download/ueransim-ues-0.1.2/ueransim-ues-0.1.2.tgz
     version: 0.1.2
-generated: "2026-01-29T09:53:20.0273365Z"
+generated: "2026-01-29T11:09:11.053346789Z"
