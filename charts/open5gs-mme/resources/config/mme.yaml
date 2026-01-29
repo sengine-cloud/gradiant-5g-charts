@@ -1,4 +1,4 @@
-{{ $open5gsName := .Release.Name }}
+{{ $open5gsName := default .Release.Name .Values.open5gsNameOverride }}
 logger:
   level: {{ .Values.config.logLevel }}
 parameter: {}

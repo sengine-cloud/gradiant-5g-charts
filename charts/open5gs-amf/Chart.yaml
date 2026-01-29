@@ -10,7 +10,7 @@ maintainers:
   - email: alex@sengine.cloud
     name: impuls42
 name: open5gs-amf
-version: 2.3.4
+version: 2.3.5
 annotations:
   artifacthub.io/category: networking
 keywords:

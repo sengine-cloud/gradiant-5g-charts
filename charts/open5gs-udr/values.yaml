@@ -41,6 +41,8 @@ commonLabels: {}
 ##
 extraDeploy: []
 
+open5gsNameOverride: ""
+
 ## @section open5gs-udr parameters
 
 ## Bitnami open5gs image version

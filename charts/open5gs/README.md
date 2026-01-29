@@ -1,6 +1,6 @@
 # open5gs
 
-![Version: 2.3.6](https://img.shields.io/badge/Version-2.3.6-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
+![Version: 2.3.8](https://img.shields.io/badge/Version-2.3.8-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
 
 Helm chart to deploy Open5gs services on Kubernetes.
 
@@ -20,24 +20,24 @@ Helm chart to deploy Open5gs services on Kubernetes.
 
 | Repository | Name | Version |
 |------------|------|---------|
-| file://../open5gs-amf | amf(open5gs-amf) | ~2.3.3 |
-| file://../open5gs-ausf | ausf(open5gs-ausf) | ~2.3.2 |
-| file://../open5gs-bsf | bsf(open5gs-bsf) | ~2.3.2 |
-| file://../open5gs-hss | hss(open5gs-hss) | ~2.3.1 |
-| file://../open5gs-mme | mme(open5gs-mme) | ~2.3.1 |
-| file://../open5gs-nrf | nrf(open5gs-nrf) | ~2.3.2 |
-| file://../open5gs-nssf | nssf(open5gs-nssf) | ~2.3.2 |
-| file://../open5gs-pcf | pcf(open5gs-pcf) | ~2.3.2 |
-| file://../open5gs-pcrf | pcrf(open5gs-pcrf) | ~2.3.1 |
-| file://../open5gs-scp | scp(open5gs-scp) | ~2.3.2 |
-| file://../open5gs-sepp | sepp(open5gs-sepp) | ~2.3.2 |
-| file://../open5gs-sgwc | sgwc(open5gs-sgwc) | ~2.3.1 |
-| file://../open5gs-sgwu | sgwu(open5gs-sgwu) | ~2.3.1 |
-| file://../open5gs-smf | smf(open5gs-smf) | ~2.3.2 |
-| file://../open5gs-udm | udm(open5gs-udm) | ~2.3.2 |
-| file://../open5gs-udr | udr(open5gs-udr) | ~2.3.2 |
-| file://../open5gs-upf | upf(open5gs-upf) | ~2.3.3 |
-| file://../open5gs-webui | webui(open5gs-webui) | ~2.3.2 |
+| file://../open5gs-amf | amf(open5gs-amf) | ~2.3.5 |
+| file://../open5gs-ausf | ausf(open5gs-ausf) | ~2.3.4 |
+| file://../open5gs-bsf | bsf(open5gs-bsf) | ~2.3.4 |
+| file://../open5gs-hss | hss(open5gs-hss) | ~2.3.2 |
+| file://../open5gs-mme | mme(open5gs-mme) | ~2.3.3 |
+| file://../open5gs-nrf | nrf(open5gs-nrf) | ~2.3.3 |
+| file://../open5gs-nssf | nssf(open5gs-nssf) | ~2.3.4 |
+| file://../open5gs-pcf | pcf(open5gs-pcf) | ~2.3.4 |
+| file://../open5gs-pcrf | pcrf(open5gs-pcrf) | ~2.3.2 |
+| file://../open5gs-scp | scp(open5gs-scp) | ~2.3.4 |
+| file://../open5gs-sepp | sepp(open5gs-sepp) | ~2.3.4 |
+| file://../open5gs-sgwc | sgwc(open5gs-sgwc) | ~2.3.3 |
+| file://../open5gs-sgwu | sgwu(open5gs-sgwu) | ~2.3.3 |
+| file://../open5gs-smf | smf(open5gs-smf) | ~2.3.4 |
+| file://../open5gs-udm | udm(open5gs-udm) | ~2.3.4 |
+| file://../open5gs-udr | udr(open5gs-udr) | ~2.3.4 |
+| file://../open5gs-upf | upf(open5gs-upf) | ~2.3.5 |
+| file://../open5gs-webui | webui(open5gs-webui) | ~2.3.3 |
 | https://charts.bitnami.com/bitnami | common | 2.x.x |
 | https://charts.bitnami.com/bitnami | mongodb | ~18.0.5 |
 
@@ -46,20 +46,29 @@ Helm chart to deploy Open5gs services on Kubernetes.
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | amf.enabled | bool | `true` |  |
+| amf.nameOverride | string | `"amf"` |  |
 | ausf.enabled | bool | `true` |  |
+| ausf.nameOverride | string | `"ausf"` |  |
 | bsf.enabled | bool | `true` |  |
+| bsf.nameOverride | string | `"bsf"` |  |
 | dbURI | string | `"mongodb://{{ .Release.Name }}-mongodb/open5gs"` |  |
 | hss.enabled | bool | `true` |  |
 | hss.mongodb.enabled | bool | `false` |  |
+| hss.nameOverride | string | `"hss"` |  |
 | mme.enabled | bool | `true` |  |
+| mme.nameOverride | string | `"mme"` |  |
 | mongodb.auth.enabled | bool | `false` |  |
 | mongodb.enabled | bool | `true` |  |
 | nrf.enabled | bool | `true` |  |
+| nrf.nameOverride | string | `"nrf"` |  |
 | nssf.enabled | bool | `true` |  |
+| nssf.nameOverride | string | `"nssf"` |  |
 | pcf.enabled | bool | `true` |  |
 | pcf.mongodb.enabled | bool | `false` |  |
+| pcf.nameOverride | string | `"pcf"` |  |
 | pcrf.enabled | bool | `true` |  |
 | pcrf.mongodb.enabled | bool | `false` |  |
+| pcrf.nameOverride | string | `"pcrf"` |  |
 | populate.enabled | bool | `true` |  |
 | populate.image.pullPolicy | string | `"IfNotPresent"` |  |
 | populate.image.registry | string | `"docker.io"` |  |
@@ -68,15 +77,24 @@ Helm chart to deploy Open5gs services on Kubernetes.
 | populate.subscribers | list | `[]` |  |
 | scp.enabled | bool | `true` |  |
 | scp.mongodb.enabled | bool | `false` |  |
+| scp.nameOverride | string | `"scp"` |  |
 | sepp.enabled | bool | `true` |  |
+| sepp.nameOverride | string | `"sepp"` |  |
 | sgwc.enabled | bool | `true` |  |
+| sgwc.nameOverride | string | `"sgwc"` |  |
 | sgwu.enabled | bool | `true` |  |
+| sgwu.nameOverride | string | `"sgwu"` |  |
 | smf.enabled | bool | `true` |  |
+| smf.nameOverride | string | `"smf"` |  |
 | udm.enabled | bool | `true` |  |
+| udm.nameOverride | string | `"udm"` |  |
 | udr.enabled | bool | `true` |  |
 | udr.mongodb.enabled | bool | `false` |  |
+| udr.nameOverride | string | `"udr"` |  |
 | upf.enabled | bool | `true` |  |
+| upf.nameOverride | string | `"upf"` |  |
 | webui.enabled | bool | `true` |  |
+| webui.nameOverride | string | `"webui"` |  |
 
 ----------------------------------------------
 Autogenerated from chart metadata using [helm-docs v1.14.2](https://github.com/norwoodj/helm-docs/releases/v1.14.2)
