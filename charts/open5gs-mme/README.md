@@ -1,6 +1,6 @@
 # open5gs-mme
 
-![Version: 2.3.3](https://img.shields.io/badge/Version-2.3.3-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
+![Version: 2.3.4](https://img.shields.io/badge/Version-2.3.4-informational?style=flat-square) ![AppVersion: 2.7.5](https://img.shields.io/badge/AppVersion-2.7.5-informational?style=flat-square)
 
 Helm chart to deploy Open5gs MME service on Kubernetes.
 
