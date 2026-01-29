@@ -1,6 +1,6 @@
 # srsran-5g
 
-![Version: 1.0.1](https://img.shields.io/badge/Version-1.0.1-informational?style=flat-square) ![AppVersion: 23.10.1](https://img.shields.io/badge/AppVersion-23.10.1-informational?style=flat-square)
+![Version: 1.0.2](https://img.shields.io/badge/Version-1.0.2-informational?style=flat-square) ![AppVersion: 23.10.1](https://img.shields.io/badge/AppVersion-23.10.1-informational?style=flat-square)
 
 Helm chart to deploy srsRAN 5G gNB on Kubernetes.
 
@@ -27,6 +27,7 @@ Helm chart to deploy srsRAN 5G gNB on Kubernetes.
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
 | args | list | `[]` |  |
+| autoscaling.maxReplicas | int | `1` |  |
 | command | list | `[]` |  |
 | commonAnnotations | object | `{}` |  |
 | commonLabels | object | `{}` |  |

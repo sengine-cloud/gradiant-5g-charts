@@ -1,6 +1,6 @@
 # packetrusher
 
-![Version: 0.0.4](https://img.shields.io/badge/Version-0.0.4-informational?style=flat-square) ![AppVersion: 2b26573](https://img.shields.io/badge/AppVersion-2b26573-informational?style=flat-square)
+![Version: 0.0.5](https://img.shields.io/badge/Version-0.0.5-informational?style=flat-square) ![AppVersion: 2b26573](https://img.shields.io/badge/AppVersion-2b26573-informational?style=flat-square)
 
 Helm chart to deploy PacketRusher service on Kubernetes.
 
@@ -28,6 +28,7 @@ Helm chart to deploy PacketRusher service on Kubernetes.
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
 | args[0] | string | `"ue"` |  |
+| autoscaling.maxReplicas | int | `1` |  |
 | command | list | `[]` |  |
 | commonAnnotations | object | `{}` |  |
 | commonLabels | object | `{}` |  |
